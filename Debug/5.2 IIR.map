@@ -1,0 +1,274 @@
+******************************************************************************
+              TMS320C55x Linker PC v4.4.1                      
+******************************************************************************
+>> Linked Tue Oct 11 17:13:05 2022
+
+OUTPUT FILE NAME:   <5.2 IIR.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000152e
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+                        (bytes)   (bytes)    (bytes)   (bytes)
+----------------------  --------  ---------  --------  --------  ----  --------
+  DARAM                 00000100   00007f00  00001671  0000688f  RWIX
+  VECT                  00008000   00000100  00000000  00000100  RWIX
+  DARAM2                00008100   00000200  00000000  00000200  RWIX
+  DARAM3                00008300   00007d00  00000d00  00007000  RWIX
+  SARAM                 00010000   00030000  00000000  00030000  RWIX
+  SDRAM                 00040000   003e0000  00000000  003e0000  RWIX
+
+
+SECTION ALLOCATION MAP
+(Addresses surrounded by []'s are displayed for convenience only!)
+
+output                                                          attributes/
+section   page  orgn(bytes) orgn(words) len(bytes) len(words)   input sections
+--------  ----  ----------- ----------- ---------- ----------   --------------
+.pinit       0   [ 00000100 ]  00000080          *   00000000   UNINITIALIZED
+
+.text        0     00000100  [ 00000080 ] 000014eb          *   
+                   00000100  [ 00000080 ] 000003cc          *   rts55x.lib : divd.obj (.text)
+                   000004cc  [ 00000266 ] 000002d4          *   iir.obj (.text)
+                   000007a0  [ 000003d0 ] 0000025a          *   rts55x.lib : addd.obj (.text)
+                   000009fa  [ 000004fd ] 00000218          *              : cos.obj (.text)
+                   00000c12  [ 00000609 ] 000001f2          *              : sin.obj (.text)
+                   00000e04  [ 00000702 ] 000001ea          *              : cmpd.obj (.text)
+                   00000fee  [ 000007f7 ] 0000014c          *              : mpyd.obj (.text)
+                   0000113a  [ 0000089d ] 000000bf          *              : modf.obj (.text)
+                   000011f9  [ 000008fc+] 00000076          *              : frcmpyd.obj (.text)
+                   0000126f  [ 00000937+] 00000073          *              : frcmpyd_div.obj (.text)
+                   000012e2  [ 00000971 ] 0000006f          *              : fixdli.obj (.text)
+                   00001351  [ 000009a8+] 00000067          *              : fltlid.obj (.text)
+                   000013b8  [ 000009dc ] 0000005f          *              : round.obj (.text)
+                   00001417  [ 00000a0b+] 0000004d          *              : autoinit.obj (.text)
+                   00001464  [ 00000a32 ] 0000004b          *              : args_main.obj (.text)
+                   000014af  [ 00000a57+] 00000041          *              : trunc.obj (.text)
+                   000014f0  [ 00000a78 ] 0000003e          *              : exit.obj (.text)
+                   0000152e  [ 00000a97 ] 00000034          *              : boot.obj (.text)
+                   00001562  [ 00000ab1 ] 0000002a          *              : fixdi.obj (.text)
+                   0000158c  [ 00000ac6 ] 00000014          *              : subd.obj (.text)
+                   000015a0  [ 00000ad0 ] 00000013          *              : lmpy.obj (.text)
+                   000015b3  [ 00000ad9+] 00000012          *              : _lock.obj (.text)
+                   000015c5  [ 00000ae2+] 00000010          *              : negd.obj (.text)
+                   000015d5  [ 00000aea+] 0000000c          *              : fltid.obj (.text)
+                   000015e1  [ 00000af0+] 00000007          *              : exit.obj (.text:CIO_breakpoint)
+                   000015e8  [ 00000af4 ] 00000002          *              : vectors.obj (.text)
+                   000015ea  [ 00000af5 ] 00000001          *   --HOLE-- [fill = 20]
+
+.cinit       0   [ 000015ec ]  00000af6          *   00000043   
+                 [ 000015ec ]  00000af6          *   00000018   iir.obj (.cinit)
+                 [ 0000161c ]  00000b0e          *   0000000b   rts55x.lib : cos.obj (.cinit)
+                 [ 00001632 ]  00000b19          *   0000000b              : sin.obj (.cinit)
+                 [ 00001648 ]  00000b24          *   0000000a              : _lock.obj (.cinit)
+                 [ 0000165c ]  00000b2e          *   0000000a              : exit.obj (.cinit)
+                 [ 00001670 ]  00000b38          *   00000001   --HOLE-- [fill = 0]
+
+vectors      0     00001678  [ 00000b3c ] 00000100          *   
+                   00001678  [ 00000b3c ] 00000100          *   rts55x.lib : vectors.obj (vectors)
+
+.bss         0   [ 00008300 ]  00004180          *   0000043a   UNINITIALIZED
+                 [ 00008300 ]  00004180          *   00000421   iir.obj (.bss)
+                 [ 00008b42 ]  000045a1          *   00000001   --HOLE--
+                 [ 00008b44 ]  000045a2          *   00000008   rts55x.lib : cos.obj (.bss)
+                 [ 00008b54 ]  000045aa          *   00000008              : sin.obj (.bss)
+                 [ 00008b64 ]  000045b2          *   00000004              : _lock.obj (.bss)
+                 [ 00008b6c ]  000045b6          *   00000004              : exit.obj (.bss)
+
+.stack       0   [ 00008b74 ]  000045ba          *   000000fa   UNINITIALIZED
+                 [ 00008b74 ]  000045ba          *   000000fa   --HOLE--
+
+.sysstack 
+*            0   [ 00008d68 ]  000046b4          *   000000fa   UNINITIALIZED
+                 [ 00008d68 ]  000046b4          *   000000fa   --HOLE--
+
+.const       0   [ 00008f5c ]  000047ae          *   00000052   
+                 [ 00008f5c ]  000047ae          *   00000016   rts55x.lib : cos.obj (.const)
+                 [ 00008f88 ]  000047c4          *   00000014              : sin.obj (.const)
+                 [ 00008fb0 ]  000047d8          *   0000000c   iir.obj (.const)
+                 [ 00008fc8 ]  000047e4          *   00000008   rts55x.lib : divd.obj (.const:_initial_approx$1)
+                 [ 00008fd8 ]  000047ec          *   00000008              : round.obj (.const)
+                 [ 00008fe8 ]  000047f4          *   00000006              : modf.obj (.const)
+                 [ 00008ff4 ]  000047fa          *   00000004              : trunc.obj (.const)
+                 [ 00008ffc ]  000047fe          *   00000002              : fltlid.obj (.const)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+00000001                $TI_capability_requires_rev2
+            00004180    .bss
+00000100                .text
+000015e2                C$$EXIT
+000015a0                I$$LMPY
+000006ee                _IIR
+000005bb                _InputWave
+00001678                _Reset
+            000046b4    __STACK_END
+000001f4                __STACK_SIZE
+000001f4                __SYSSTACK_SIZE
+00000001                __TI_args_main
+ffffffff                ___binit__
+            00004180    ___bss__
+ffffffff                ___c_args__
+            00000af6    ___cinit__
+            000045ba    ___end__
+000015eb                ___etext__
+ffffffff                ___pinit__
+00000100                ___text__
+000007a0                __addd
+00001464                __args_main
+            000045b6    __cleanup_ptr
+00000f96                __cmpd
+00000100                __divd
+            000045b8    __dtors_ptr
+00000f62                __eqld
+00001562                __fixdi
+000012e2                __fixdli
+000015d5                __fltid
+00001351                __fltlid
+000011f9                __frcmpyd
+0000126f                __frcmpyd_div
+00000f18                __geqd
+00000ecd                __gtrd
+00000e80                __leqd
+            000045b2    __lock
+00000e38                __lssd
+00000fee                __mpyd
+000015a0                __mpyli
+000015c5                __negd
+00000e04                __neqd
+000015c3                __nop
+000013b8                __nround
+000015bb                __register_lock
+000015b3                __register_unlock
+            000045ba    __stack
+0000158c                __subd
+            000046b4    __sysstack
+000014af                __trunc
+            000045b4    __unlock
+000015e1                _abort
+00001417                _auto_init
+0000152e                _c_int00
+000009fa                _cos
+000014f0                _exit
+            0000419c    _f2PI
+            00004184    _fAn
+            00004180    _fBn
+            000041a0    _fIn
+            00004190    _fInput
+            000043a0    _fOut
+            00004192    _fOutput
+            00004194    _fSignal1
+            00004196    _fSignal2
+            00004198    _fStepSignal1
+            0000419a    _fStepSignal2
+            00004188    _fXn
+            0000418c    _fYn
+            0000419e    _i
+000004cc                _main
+0000113a                _modf
+            0000419f    _nIn
+            000045a0    _nOut
+00000c12                _sin
+ffffffff                binit
+            00000af6    cinit
+            000045ba    end
+000015eb                etext
+ffffffff                pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000001                $TI_capability_requires_rev2
+00000001                __TI_args_main
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+00000100                .text
+00000100                ___text__
+00000100                __divd
+000001f4                __STACK_SIZE
+000001f4                __SYSSTACK_SIZE
+000004cc                _main
+000005bb                _InputWave
+000006ee                _IIR
+000007a0                __addd
+000009fa                _cos
+00000c12                _sin
+00000e04                __neqd
+00000e38                __lssd
+00000e80                __leqd
+00000ecd                __gtrd
+00000f18                __geqd
+00000f62                __eqld
+00000f96                __cmpd
+00000fee                __mpyd
+0000113a                _modf
+000011f9                __frcmpyd
+0000126f                __frcmpyd_div
+000012e2                __fixdli
+00001351                __fltlid
+000013b8                __nround
+00001417                _auto_init
+00001464                __args_main
+000014af                __trunc
+000014f0                _exit
+0000152e                _c_int00
+00001562                __fixdi
+0000158c                __subd
+000015a0                I$$LMPY
+000015a0                __mpyli
+000015b3                __register_unlock
+000015bb                __register_lock
+000015c3                __nop
+000015c5                __negd
+000015d5                __fltid
+000015e1                _abort
+000015e2                C$$EXIT
+000015eb                ___etext__
+000015eb                etext
+            00000af6    ___cinit__
+            00000af6    cinit
+00001678                _Reset
+            00004180    .bss
+            00004180    ___bss__
+            00004180    _fBn
+            00004184    _fAn
+            00004188    _fXn
+            0000418c    _fYn
+            00004190    _fInput
+            00004192    _fOutput
+            00004194    _fSignal1
+            00004196    _fSignal2
+            00004198    _fStepSignal1
+            0000419a    _fStepSignal2
+            0000419c    _f2PI
+            0000419e    _i
+            0000419f    _nIn
+            000041a0    _fIn
+            000043a0    _fOut
+            000045a0    _nOut
+            000045b2    __lock
+            000045b4    __unlock
+            000045b6    __cleanup_ptr
+            000045b8    __dtors_ptr
+            000045ba    ___end__
+            000045ba    __stack
+            000045ba    end
+            000046b4    __STACK_END
+            000046b4    __sysstack
+ffffffff                ___binit__
+ffffffff                ___c_args__
+ffffffff                ___pinit__
+ffffffff                binit
+ffffffff                pinit
+
+[82 symbols]
